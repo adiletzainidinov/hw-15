@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import BasketButton from "./BasketButton";
-import { items } from "../../utils/general";
 
-const Header = ({ openModal }) => {
+const Header = ({ openModal,basket }) => {
   const [animationClass, setAnimationClass] = useState("");
   const calculateTotalAmount = () => {
-    const sum = items.reduce((sum, item) => {
+    const sum = basket.reduce((sum, item) => {
       return sum + item.amount;
     }, 0);
     return sum;

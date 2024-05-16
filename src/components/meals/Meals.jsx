@@ -1,41 +1,14 @@
 import MealItems from "./MealItems";
 import styled from "styled-components";
 
-let meals = [
-  {
-    id: "f1",
-    title: "Sushi",
-    description: "Finest fish and veggies",
-    price: 22.99,
-  },
-  {
-    id: "f2",
-    title: "Schnitzel",
-    description: "A german specialty!",
-    price: 16.0,
-  },
-  {
-    id: "f3",
-    title: "Barbecue Burger",
-    description: "American, raw, meaty",
-    price: 12.99,
-  },
-  {
-    id: "f4",
-    title: "Green Bowl",
-    description: "Healthy...and green...",
-    price: 19.99,
-  },
-];
-
-const Meals = () => {
+const Meals = ({meals}) => {
   return (
     <Card>
       {meals.map((meal, index) => {
         return (
           <MealItems
             key={index}
-            id={meal._id}
+            id={meal.id}
             title={meal.title}
             description={meal.description}
             price={meal.price}

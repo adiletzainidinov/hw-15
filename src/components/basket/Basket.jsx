@@ -4,39 +4,12 @@ import BasketItem from "./BasketItem";
 import TotalAmount from "./TotalAmount";
 import Button from "../UI/Button";
 
-const MEALS = [
-  {
-    id: "f1",
-    title: "Sushi",
-    price: 22.99,
-    amount: 3,
-  },
-  {
-    id: "f2",
-    title: "Schnitzel",
-    price: 16.0,
-    amount: 3,
-  },
-  {
-    id: "f3",
-    title: "Barbecue Burger",
-    price: 12.99,
-    amount: 3,
-  },
-  {
-    id: "f4",
-    title: "Green Bowl",
-    price: 19.99,
-    amount: 3,
-  },
-];
-
-const Basket = ({ onClose }) => {
+const Basket = ({ onClose,basket }) => {
   return (
     <Modal onClose={onClose}>
       <MealContainer>
-        {MEALS && MEALS.length > 0
-          ? MEALS.map((item) => <BasketItem key={item.id} {...item} />)
+        {basket && basket.length > 0
+          ? basket.map((item) => <BasketItem key={item.id} {...item} />)
           : null}
       </MealContainer>
       <TotalAmount />

@@ -1,26 +1,28 @@
 export const items = [
   {
-    id: "f1",
-    title: "Sushi",
+    id: 'f1',
+    title: 'Sushi',
     price: 22.99,
     amount: 3,
   },
   {
-    id: "f2",
-    title: "Schnitzel",
+    id: 'f2',
+    title: 'Schnitzel',
     price: 16.0,
     amount: 3,
   },
   {
-    id: "f3",
-    title: "Barbecue Burger",
+    id: 'f3',
+    title: 'Barbecue Burger',
     price: 12.99,
     amount: 3,
   },
   {
-    id: "f4",
-    title: "Green Bowl",
+    id: 'f4',
+    title: 'Green Bowl',
     price: 19.99,
     amount: 3,
   },
 ];
+
+export const BASE_URL = 'https://d5d8b7bbdfe930b8.mokky.dev';
